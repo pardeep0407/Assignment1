@@ -14,45 +14,124 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="FifaWorldCup_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label width="136" height="27" alignment="left" text="Message Text" textAlignment="center" id="W38-X3-LX6"/>
+                        <button width="1" alignment="left" title="Schedules" id="GZ5-93-eoN">
+                            <connections>
+                                <action selector="scheduleAction:" destination="AgC-eL-Hgc" id="yCz-Ok-Xph"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Subscribed" id="GOg-GT-FuU">
+                            <connections>
+                                <action selector="subscribedAction:" destination="AgC-eL-Hgc" id="1mJ-Jk-QER"/>
+                            </connections>
+                        </button>
                     </items>
-                    <connections>
-                        <outlet property="lblMessage" destination="W38-X3-LX6" id="PHp-Kv-gPf"/>
-                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>
-        <!--Static Notification Interface Controller-->
-        <scene sceneID="AEw-b0-oYE">
+        <!--Schedules-->
+        <scene sceneID="xx9-ft-Nee">
             <objects>
-                <notificationController id="YCC-NB-fut">
+                <controller identifier="ScheduleListsVC" title="Schedules" id="9Da-yT-COO" customClass="ScheduleListsVC" customModule="FifaWorldCup_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                        <group width="1" alignment="left" layout="overlap" id="HJp-Zl-i3C">
+                            <items>
+                                <table alignment="left" id="awA-5V-iCm">
+                                    <items>
+                                        <tableRow identifier="ScheduleRowType" id="SwK-Hm-3KJ" customClass="ScheduleRow" customModule="FifaWorldCup_WatchKit_Extension">
+                                            <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="Uiv-Hx-laP">
+                                                <items>
+                                                    <group width="1" alignment="left" layout="vertical" id="hJs-p7-DJQ">
+                                                        <items>
+                                                            <label alignment="left" text="22 Jun 2019 - 17:30" minimumScaleFactor="0.29999999999999999" id="etc-yh-12D"/>
+                                                            <label alignment="left" text="Stade des Alpes" textAlignment="left" minimumScaleFactor="0.20000000000000001" id="iLm-g6-eVc"/>
+                                                            <label alignment="left" text="Grenoble" textAlignment="left" minimumScaleFactor="0.20000000000000001" id="uSl-WP-gdR"/>
+                                                            <label alignment="left" text="Match 38" textAlignment="left" numberOfLines="2" minimumScaleFactor="0.20000000000000001" id="9pO-Fo-gK4"/>
+                                                        </items>
+                                                    </group>
+                                                    <group alignment="left" id="sRe-Cm-iy4">
+                                                        <items>
+                                                            <imageView width="60" height="40" alignment="left" image="ger" contentMode="scaleAspectFit" id="jm6-a3-cYZ"/>
+                                                            <label alignment="left" verticalAlignment="center" text="VS" textAlignment="center" id="hjL-8W-ZtZ"/>
+                                                            <imageView width="60" height="40" alignment="left" image="ned" contentMode="scaleAspectFit" id="29r-bW-jOa"/>
+                                                        </items>
+                                                    </group>
+                                                </items>
+                                            </group>
+                                            <connections>
+                                                <outlet property="lblCity" destination="uSl-WP-gdR" id="OKJ-sF-bPG"/>
+                                                <outlet property="lblDate" destination="etc-yh-12D" id="0CV-ZH-5Fg"/>
+                                                <outlet property="lblMatchNumber" destination="9pO-Fo-gK4" id="out-lu-kFa"/>
+                                                <outlet property="lblStadium" destination="iLm-g6-eVc" id="PrD-95-Mlt"/>
+                                                <outlet property="team1Image" destination="jm6-a3-cYZ" id="n2W-Pm-0af"/>
+                                                <outlet property="team2Image" destination="29r-bW-jOa" id="g93-Xl-lNf"/>
+                                            </connections>
+                                        </tableRow>
+                                    </items>
+                                </table>
+                                <label alignment="center" verticalAlignment="center" hidden="YES" text="No Games" id="yn7-Fd-VrX"/>
+                            </items>
+                        </group>
                     </items>
-                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
                     <connections>
-                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
-                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
-                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                        <outlet property="lblNoSchedule" destination="yn7-Fd-VrX" id="Zwx-7d-zaI"/>
+                        <outlet property="tblSchedule" destination="awA-5V-iCm" id="f72-gh-BQy"/>
                     </connections>
-                </notificationController>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
+            <point key="canvasLocation" x="450" y="345"/>
         </scene>
-        <!--Notification Controller-->
-        <scene sceneID="ZPc-GJ-vnh">
+        <!--Subscribed List-->
+        <scene sceneID="sZE-dP-QUB">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="FifaWorldCup_WatchKit_App" customModuleProvider="target"/>
+                <controller identifier="SubscribedListsVC" title="Subscribed List" id="YFc-ci-a6l" customClass="SubscribedListsVC" customModule="FifaWorldCup_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="overlap" id="XZ6-DY-s5M">
+                            <items>
+                                <table alignment="left" id="Ey7-Jy-PDn">
+                                    <items>
+                                        <tableRow identifier="ScheduleRowType" id="ILE-V3-6g4" customClass="ScheduleRow" customModule="FifaWorldCup_WatchKit_Extension">
+                                            <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="f0l-Ms-OAC">
+                                                <items>
+                                                    <group width="1" alignment="left" layout="vertical" id="fVq-yV-MZu">
+                                                        <items>
+                                                            <label alignment="left" text="22 Jun 2019 - 17:30" minimumScaleFactor="0.29999999999999999" id="jKj-PI-jKx"/>
+                                                            <label alignment="left" text="Stade des Alpes" textAlignment="left" minimumScaleFactor="0.20000000000000001" id="sHa-Dq-Zwt"/>
+                                                            <label alignment="left" text="Grenoble" textAlignment="left" minimumScaleFactor="0.20000000000000001" id="XUL-n5-6k6"/>
+                                                            <label alignment="left" text="Match 38" textAlignment="left" numberOfLines="2" minimumScaleFactor="0.20000000000000001" id="Lba-OG-6k0"/>
+                                                        </items>
+                                                    </group>
+                                                    <group alignment="left" id="h0a-aQ-afn">
+                                                        <items>
+                                                            <imageView width="60" height="40" alignment="left" image="ger" contentMode="scaleAspectFit" id="Ufa-o0-4iE"/>
+                                                            <label alignment="left" verticalAlignment="center" text="VS" textAlignment="center" id="xiI-Kx-Ldr"/>
+                                                            <imageView width="60" height="40" alignment="left" image="ned" contentMode="scaleAspectFit" id="Lm7-qq-74B"/>
+                                                        </items>
+                                                    </group>
+                                                </items>
+                                            </group>
+                                            <connections>
+                                                <outlet property="lblCity" destination="XUL-n5-6k6" id="e8H-hU-4lS"/>
+                                                <outlet property="lblDate" destination="jKj-PI-jKx" id="DnW-0m-UTa"/>
+                                                <outlet property="lblMatchNumber" destination="Lba-OG-6k0" id="Pqv-1v-rI5"/>
+                                                <outlet property="lblStadium" destination="sHa-Dq-Zwt" id="P6p-e6-TmR"/>
+                                                <outlet property="team1Image" destination="Ufa-o0-4iE" id="cTv-25-DeY"/>
+                                                <outlet property="team2Image" destination="Lm7-qq-74B" id="xC0-0a-t46"/>
+                                            </connections>
+                                        </tableRow>
+                                    </items>
+                                </table>
+                                <label alignment="center" verticalAlignment="center" hidden="YES" text="No Games" id="Iip-PP-xWh"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="lblNoSubscribed" destination="Iip-PP-xWh" id="0YW-Jh-Ec7"/>
+                        <outlet property="tblSubscribedSchedule" destination="Ey7-Jy-PDn" id="vbV-xT-A7J"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="468" y="643"/>
-        </scene>
-        <!--Notification Controller-->
-        <scene sceneID="Niz-AI-uX2">
-            <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="FifaWorldCup_WatchKit_App" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="468" y="345"/>
+            <point key="canvasLocation" x="673" y="345"/>
         </scene>
     </scenes>
 </document>

@@ -15,6 +15,7 @@ target 'FifaWorldCup WatchKit App' do
   use_frameworks!
 
   # Pods for FifaWorldCup WatchKit App
+pod 'Alamofire'
 
 end
 
@@ -23,5 +24,6 @@ target 'FifaWorldCup WatchKit Extension' do
   use_frameworks!
 
   # Pods for FifaWorldCup WatchKit Extension
+pod 'Alamofire'
 
 end

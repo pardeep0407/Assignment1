@@ -11,8 +11,12 @@ import UIKit
 class MatchTVC: UITableViewCell {
     
     @IBOutlet weak var lblDate : UILabel!
-    @IBOutlet weak var lblAddress : UILabel!
+    @IBOutlet weak var lblStadium : UILabel!
+    @IBOutlet weak var lblCity : UILabel!
     @IBOutlet weak var lblMatchNumber : UILabel!
+    
+    @IBOutlet weak var team1ImageView : UIImageView!
+    @IBOutlet weak var team2ImageView : UIImageView!
     
     @IBOutlet weak var btnSubUnSub : UIButton!
 

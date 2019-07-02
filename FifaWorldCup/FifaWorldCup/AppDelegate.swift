@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     var arrMatchList : [MatchSections] = []
-    
+    var spinner : UIActivityIndicatorView?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -51,8 +51,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //MARK: - Global Functions
     func getSchedule(){
-        
+        self.startLoading()
         Alamofire.request(URL.init(string: "https://fifa-women-s-worldcup.firebaseio.com/list.json")!).responseJSON { (response) in
+            
             switch response.result
             {
             case .success:
@@ -72,27 +73,94 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                             
                             let mDict = matchDict as! NSDictionary
                             
+                            let timeStemp = mDict["date"] as! Double
+                            let mDisplayDate = self.getDisplayDate(timeStemp: timeStemp)
+                            
                             let matchItem = Match.init(
-                                mDate: mDict["date"] as! String,
-                                mAddress: mDict["address"] as! String,
+                                mMatchId : mDict["matchId"] as! String,
+                                mTimeStemp : timeStemp,
+                                mDate: mDisplayDate,
+                                mStadium: mDict["stadium"] as! String,
+                                mCity: mDict["city"] as! String,
                                 mMatchNumber: mDict["match"] as! String,
                                 mLatitude: mDict["latitude"] as! Double,
-                                mLongitude: mDict["longitude"] as! Double
-                            )
+                                mLongitude: mDict["longitude"] as! Double,
+                                mTeam1: mDict["team1"] as! String,
+                                mTeam2: mDict["team2"] as! String,
+                                mTeam1Flag: mDict["team1Flag"] as! String,
+                                mTeam2Flag: mDict["team2Flag"] as! String)
                             
                             arrMatches.append(matchItem)
                         }
                         
+                        arrMatches.sort(by: { $0.mTimeStemp > $1.mTimeStemp })
                         let matchSectionItem = MatchSections.init(sesionName: sectionDict["section"] as! String, matches: arrMatches)
                         self.arrMatchList.append(matchSectionItem)
-                        
                     }
+                    
+                    //Sort Matches According to Date
+                    self.arrMatchList.sort(by: { ($0.matches.max(by: { $0.mTimeStemp > $1.mTimeStemp }))!.mTimeStemp > ($1.matches.max(by: { $0.mTimeStemp > $1.mTimeStemp }))!.mTimeStemp })
+                    NotificationCenter.default.post(name: Notification.Name.init("Did_Get_Schedules"), object: nil)
                 }
             case .failure( _):
                 print("Faild")
             }
             
+            self.stopLoading()
         }
+    }
+    
+    func getDisplayDate(timeStemp : Double) -> String{
+        
+        let dateFormatter = DateFormatter.init()
+        dateFormatter.dateFormat = "dd LLL yyyy hh:mm a"
+        dateFormatter.locale = Locale.init(identifier: "en_US_POSIX")
+        return dateFormatter.string(from: Date.init(timeIntervalSince1970: timeStemp))
+    }
+    
+    func startLoading(){
+        
+        spinner = UIActivityIndicatorView(frame: CGRect.init(x: 0.0, y: 0.0, width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.height)) as UIActivityIndicatorView
+        spinner?.style = UIActivityIndicatorView.Style.whiteLarge
+        spinner?.backgroundColor = .black
+        spinner?.alpha = 0.75
+        spinner?.startAnimating()
+        window?.rootViewController?.view.addSubview(spinner!)
+    }
+    
+    func stopLoading(){
+        spinner?.stopAnimating()
+        spinner?.removeFromSuperview()
+    }
+    
+}
+
+
+class PrefrenceManager : NSObject {
+    
+    static let sharedPrefrenceInstance: PrefrenceManager = {
+        let instance = PrefrenceManager()
+        return instance
+    } ()
+    
+    var subscribeMatchIds : [String] {
+        get{
+            if let arrSub = UserDefaults.standard.array(forKey: "Subscribed_Matched") as? [String]{
+                return arrSub
+            }
+            return []
+        }set{
+            UserDefaults.standard.set(newValue, forKey: "Subscribed_Matched")
+        }
+    }
+    
+    
+    func unSubscribedMatchId(matchId: String){
+        var arrSub = self.subscribeMatchIds
+        if arrSub.contains(matchId) {
+            arrSub.removeAll(where: { $0 == matchId })
+        }
+        self.subscribeMatchIds = arrSub
     }
     
 }

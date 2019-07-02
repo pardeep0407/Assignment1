@@ -19,25 +19,64 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qJt-iS-Cvl">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="yqb-NQ-qzC" id="D7Q-0a-Tt4"/>
                                     <outlet property="delegate" destination="yqb-NQ-qzC" id="2Fl-OD-yJt"/>
                                 </connections>
                             </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isk-qr-bRJ">
+                                <rect key="frame" x="135" y="320.5" width="105" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEu-g9-hSR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="wan-NO-BRi"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8oj-3L-YzS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Women's WorldCup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9RZ-s8-QCE">
+                                        <rect key="frame" x="109" y="12" width="157" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="9RZ-s8-QCE" firstAttribute="centerX" secondItem="8oj-3L-YzS" secondAttribute="centerX" id="eGY-YK-blK"/>
+                                    <constraint firstAttribute="height" constant="44" id="f3v-5D-kH1"/>
+                                    <constraint firstItem="9RZ-s8-QCE" firstAttribute="centerY" secondItem="8oj-3L-YzS" secondAttribute="centerY" id="kqy-Mi-qOc"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="isk-qr-bRJ" firstAttribute="centerX" secondItem="lML-M6-33b" secondAttribute="centerX" id="1Ub-Pc-hFy"/>
+                            <constraint firstItem="kX1-7j-ZfH" firstAttribute="trailing" secondItem="8oj-3L-YzS" secondAttribute="trailing" id="1hf-09-duS"/>
                             <constraint firstItem="kX1-7j-ZfH" firstAttribute="trailing" secondItem="qJt-iS-Cvl" secondAttribute="trailing" id="42p-v1-Qc4"/>
+                            <constraint firstItem="isk-qr-bRJ" firstAttribute="centerY" secondItem="lML-M6-33b" secondAttribute="centerY" id="9NU-Aw-qNZ"/>
                             <constraint firstItem="kX1-7j-ZfH" firstAttribute="bottom" secondItem="qJt-iS-Cvl" secondAttribute="bottom" id="Gis-zE-rTT"/>
-                            <constraint firstItem="qJt-iS-Cvl" firstAttribute="top" secondItem="lML-M6-33b" secondAttribute="top" id="V9e-nF-Ld7"/>
+                            <constraint firstItem="8oj-3L-YzS" firstAttribute="top" secondItem="kX1-7j-ZfH" secondAttribute="top" id="H6g-7r-gYw"/>
+                            <constraint firstItem="8oj-3L-YzS" firstAttribute="leading" secondItem="kX1-7j-ZfH" secondAttribute="leading" id="Owg-wA-Geh"/>
+                            <constraint firstAttribute="trailing" secondItem="CEu-g9-hSR" secondAttribute="trailing" id="SIu-Dy-431"/>
+                            <constraint firstItem="qJt-iS-Cvl" firstAttribute="top" secondItem="8oj-3L-YzS" secondAttribute="bottom" id="dxa-Zs-B4c"/>
                             <constraint firstItem="qJt-iS-Cvl" firstAttribute="leading" secondItem="kX1-7j-ZfH" secondAttribute="leading" id="esa-B5-U9N"/>
+                            <constraint firstItem="CEu-g9-hSR" firstAttribute="top" secondItem="lML-M6-33b" secondAttribute="top" id="haS-zZ-AL1"/>
+                            <constraint firstItem="CEu-g9-hSR" firstAttribute="leading" secondItem="lML-M6-33b" secondAttribute="leading" id="p1s-ww-H7a"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kX1-7j-ZfH"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="List" image="icon_list" id="Be0-em-ARs"/>
                     <connections>
+                        <outlet property="lblNoGames" destination="isk-qr-bRJ" id="OEa-u3-hB5"/>
                         <outlet property="tblList" destination="qJt-iS-Cvl" id="wzn-uc-Bg8"/>
                     </connections>
                 </viewController>
@@ -54,15 +93,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YXI-0c-MdW">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2mA-6A-jrq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="lHr-bq-bXt"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f5b-S7-3CS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Women's WorldCup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmA-Bz-Lbz">
+                                        <rect key="frame" x="109" y="12" width="157" height="20"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="hNY-cz-Qp8"/>
+                                    <constraint firstItem="zmA-Bz-Lbz" firstAttribute="centerY" secondItem="f5b-S7-3CS" secondAttribute="centerY" id="p8P-G1-eWi"/>
+                                    <constraint firstItem="zmA-Bz-Lbz" firstAttribute="centerX" secondItem="f5b-S7-3CS" secondAttribute="centerX" id="p8g-Mw-Yf7"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="f5b-S7-3CS" firstAttribute="top" secondItem="a0m-VR-PbY" secondAttribute="top" id="FRz-6D-Mhm"/>
+                            <constraint firstAttribute="trailing" secondItem="2mA-6A-jrq" secondAttribute="trailing" id="GQL-cG-l1u"/>
+                            <constraint firstItem="YXI-0c-MdW" firstAttribute="top" secondItem="f5b-S7-3CS" secondAttribute="bottom" id="HZI-J5-4wt"/>
+                            <constraint firstItem="2mA-6A-jrq" firstAttribute="top" secondItem="zZu-ds-WqG" secondAttribute="top" id="KiZ-LI-Wh2"/>
                             <constraint firstItem="YXI-0c-MdW" firstAttribute="leading" secondItem="a0m-VR-PbY" secondAttribute="leading" id="VSf-6K-yHX"/>
+                            <constraint firstItem="2mA-6A-jrq" firstAttribute="leading" secondItem="a0m-VR-PbY" secondAttribute="leading" id="Z3o-ct-tVO"/>
                             <constraint firstItem="a0m-VR-PbY" firstAttribute="trailing" secondItem="YXI-0c-MdW" secondAttribute="trailing" id="ZR1-QP-tv6"/>
                             <constraint firstItem="a0m-VR-PbY" firstAttribute="bottom" secondItem="YXI-0c-MdW" secondAttribute="bottom" id="f9s-mY-lns"/>
-                            <constraint firstItem="YXI-0c-MdW" firstAttribute="top" secondItem="zZu-ds-WqG" secondAttribute="top" id="zBp-DP-Pr6"/>
+                            <constraint firstAttribute="trailing" secondItem="f5b-S7-3CS" secondAttribute="trailing" id="h3P-qf-Jzb"/>
+                            <constraint firstItem="f5b-S7-3CS" firstAttribute="leading" secondItem="a0m-VR-PbY" secondAttribute="leading" id="tLV-bL-4Jc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="a0m-VR-PbY"/>
                     </view>
