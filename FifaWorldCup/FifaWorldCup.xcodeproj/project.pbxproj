@@ -1,0 +1,786 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D5B44EEEDEF76E0B63149F1 /* Pods_FifaWorldCup_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EB3AFD0EDC28DBBA33EAE30 /* Pods_FifaWorldCup_WatchKit_App.framework */; };
+		3247831922C7412F0094F51F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3247831822C7412F0094F51F /* AppDelegate.swift */; };
+		3247831B22C7412F0094F51F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3247831A22C7412F0094F51F /* ViewController.swift */; };
+		3247831E22C7412F0094F51F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3247831C22C7412F0094F51F /* Main.storyboard */; };
+		3247832022C741320094F51F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3247831F22C741320094F51F /* Assets.xcassets */; };
+		3247832322C741320094F51F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3247832122C741320094F51F /* LaunchScreen.storyboard */; };
+		3247832822C741320094F51F /* FifaWorldCup WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3247832722C741320094F51F /* FifaWorldCup WatchKit App.app */; };
+		3247832E22C741320094F51F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3247832C22C741320094F51F /* Interface.storyboard */; };
+		3247833022C741330094F51F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3247832F22C741330094F51F /* Assets.xcassets */; };
+		3247833722C741330094F51F /* FifaWorldCup WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3247833622C741330094F51F /* FifaWorldCup WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3247833C22C741330094F51F /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3247833B22C741330094F51F /* InterfaceController.swift */; };
+		3247833E22C741330094F51F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3247833D22C741330094F51F /* ExtensionDelegate.swift */; };
+		3247834022C741330094F51F /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3247833F22C741330094F51F /* NotificationController.swift */; };
+		3247834222C741340094F51F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3247834122C741340094F51F /* Assets.xcassets */; };
+		324F2EF222CA11F500649233 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F2EF122CA11F500649233 /* MapViewController.swift */; };
+		324F2EF622CA161D00649233 /* MatchTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324F2EF422CA161D00649233 /* MatchTVC.swift */; };
+		324F2EF722CA161D00649233 /* MatchTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 324F2EF522CA161D00649233 /* MatchTVC.xib */; };
+		C9E9CCE83ADF2B135A48D4AB /* Pods_FifaWorldCup_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C282200E8FD263EBCE36FBB /* Pods_FifaWorldCup_WatchKit_Extension.framework */; };
+		F281BBB6CF8BD5AF3822A7D9 /* Pods_FifaWorldCup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DAD6F56B1E4EC1C9EED02B1 /* Pods_FifaWorldCup.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3247832922C741320094F51F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3247830D22C7412F0094F51F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3247832622C741320094F51F;
+			remoteInfo = "FifaWorldCup WatchKit App";
+		};
+		3247833822C741330094F51F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3247830D22C7412F0094F51F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3247833522C741330094F51F;
+			remoteInfo = "FifaWorldCup WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3247834A22C741340094F51F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3247833722C741330094F51F /* FifaWorldCup WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3247834E22C741340094F51F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				3247832822C741320094F51F /* FifaWorldCup WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		02930F520ABD28D4B53AB8F9 /* Pods-FifaWorldCup WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FifaWorldCup WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-FifaWorldCup WatchKit Extension/Pods-FifaWorldCup WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		1C282200E8FD263EBCE36FBB /* Pods_FifaWorldCup_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FifaWorldCup_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DAD6F56B1E4EC1C9EED02B1 /* Pods_FifaWorldCup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FifaWorldCup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3247831522C7412F0094F51F /* FifaWorldCup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FifaWorldCup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3247831822C7412F0094F51F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3247831A22C7412F0094F51F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3247831D22C7412F0094F51F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3247831F22C741320094F51F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3247832222C741320094F51F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3247832422C741320094F51F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3247832722C741320094F51F /* FifaWorldCup WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FifaWorldCup WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3247832D22C741320094F51F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		3247832F22C741330094F51F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3247833122C741330094F51F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3247833622C741330094F51F /* FifaWorldCup WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FifaWorldCup WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3247833B22C741330094F51F /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		3247833D22C741330094F51F /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		3247833F22C741330094F51F /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		3247834122C741340094F51F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3247834322C741340094F51F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3247834422C741340094F51F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		324F2EF122CA11F500649233 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		324F2EF422CA161D00649233 /* MatchTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTVC.swift; sourceTree = "<group>"; };
+		324F2EF522CA161D00649233 /* MatchTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MatchTVC.xib; sourceTree = "<group>"; };
+		4BD5A3E1B41BC7D48871B1D0 /* Pods-FifaWorldCup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FifaWorldCup.debug.xcconfig"; path = "Target Support Files/Pods-FifaWorldCup/Pods-FifaWorldCup.debug.xcconfig"; sourceTree = "<group>"; };
+		5BC130480AFA29FB01F92C4C /* Pods-FifaWorldCup WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FifaWorldCup WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-FifaWorldCup WatchKit App/Pods-FifaWorldCup WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		5EB3AFD0EDC28DBBA33EAE30 /* Pods_FifaWorldCup_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FifaWorldCup_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A07A5B690C62D15CD2CD448D /* Pods-FifaWorldCup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FifaWorldCup.release.xcconfig"; path = "Target Support Files/Pods-FifaWorldCup/Pods-FifaWorldCup.release.xcconfig"; sourceTree = "<group>"; };
+		ECDBD4663E39DA60C76E0434 /* Pods-FifaWorldCup WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FifaWorldCup WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-FifaWorldCup WatchKit App/Pods-FifaWorldCup WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		F56DD3B851A5C489BD7D5BF9 /* Pods-FifaWorldCup WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FifaWorldCup WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-FifaWorldCup WatchKit Extension/Pods-FifaWorldCup WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3247831222C7412F0094F51F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F281BBB6CF8BD5AF3822A7D9 /* Pods_FifaWorldCup.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3247833322C741330094F51F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9E9CCE83ADF2B135A48D4AB /* Pods_FifaWorldCup_WatchKit_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60A73BB1C0CAC58AAEB4F169 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D5B44EEEDEF76E0B63149F1 /* Pods_FifaWorldCup_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3247830C22C7412F0094F51F = {
+			isa = PBXGroup;
+			children = (
+				3247831722C7412F0094F51F /* FifaWorldCup */,
+				3247832B22C741320094F51F /* FifaWorldCup WatchKit App */,
+				3247833A22C741330094F51F /* FifaWorldCup WatchKit Extension */,
+				3247831622C7412F0094F51F /* Products */,
+				C759B784FAB5A01EC312BE5B /* Pods */,
+				41F00F2A61F449867142153D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3247831622C7412F0094F51F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3247831522C7412F0094F51F /* FifaWorldCup.app */,
+				3247832722C741320094F51F /* FifaWorldCup WatchKit App.app */,
+				3247833622C741330094F51F /* FifaWorldCup WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3247831722C7412F0094F51F /* FifaWorldCup */ = {
+			isa = PBXGroup;
+			children = (
+				324F2EF322CA160200649233 /* UITableViewCell */,
+				3247831822C7412F0094F51F /* AppDelegate.swift */,
+				3247831A22C7412F0094F51F /* ViewController.swift */,
+				324F2EF122CA11F500649233 /* MapViewController.swift */,
+				3247831C22C7412F0094F51F /* Main.storyboard */,
+				3247831F22C741320094F51F /* Assets.xcassets */,
+				3247832122C741320094F51F /* LaunchScreen.storyboard */,
+				3247832422C741320094F51F /* Info.plist */,
+			);
+			path = FifaWorldCup;
+			sourceTree = "<group>";
+		};
+		3247832B22C741320094F51F /* FifaWorldCup WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				3247832C22C741320094F51F /* Interface.storyboard */,
+				3247832F22C741330094F51F /* Assets.xcassets */,
+				3247833122C741330094F51F /* Info.plist */,
+			);
+			path = "FifaWorldCup WatchKit App";
+			sourceTree = "<group>";
+		};
+		3247833A22C741330094F51F /* FifaWorldCup WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3247833B22C741330094F51F /* InterfaceController.swift */,
+				3247833D22C741330094F51F /* ExtensionDelegate.swift */,
+				3247833F22C741330094F51F /* NotificationController.swift */,
+				3247834122C741340094F51F /* Assets.xcassets */,
+				3247834322C741340094F51F /* Info.plist */,
+				3247834422C741340094F51F /* PushNotificationPayload.apns */,
+			);
+			path = "FifaWorldCup WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		324F2EF322CA160200649233 /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				324F2EF422CA161D00649233 /* MatchTVC.swift */,
+				324F2EF522CA161D00649233 /* MatchTVC.xib */,
+			);
+			path = UITableViewCell;
+			sourceTree = "<group>";
+		};
+		41F00F2A61F449867142153D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DAD6F56B1E4EC1C9EED02B1 /* Pods_FifaWorldCup.framework */,
+				5EB3AFD0EDC28DBBA33EAE30 /* Pods_FifaWorldCup_WatchKit_App.framework */,
+				1C282200E8FD263EBCE36FBB /* Pods_FifaWorldCup_WatchKit_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C759B784FAB5A01EC312BE5B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4BD5A3E1B41BC7D48871B1D0 /* Pods-FifaWorldCup.debug.xcconfig */,
+				A07A5B690C62D15CD2CD448D /* Pods-FifaWorldCup.release.xcconfig */,
+				5BC130480AFA29FB01F92C4C /* Pods-FifaWorldCup WatchKit App.debug.xcconfig */,
+				ECDBD4663E39DA60C76E0434 /* Pods-FifaWorldCup WatchKit App.release.xcconfig */,
+				02930F520ABD28D4B53AB8F9 /* Pods-FifaWorldCup WatchKit Extension.debug.xcconfig */,
+				F56DD3B851A5C489BD7D5BF9 /* Pods-FifaWorldCup WatchKit Extension.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3247831422C7412F0094F51F /* FifaWorldCup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3247834F22C741340094F51F /* Build configuration list for PBXNativeTarget "FifaWorldCup" */;
+			buildPhases = (
+				A8BD4CDBAB36057ABCBBF560 /* [CP] Check Pods Manifest.lock */,
+				3247831122C7412F0094F51F /* Sources */,
+				3247831222C7412F0094F51F /* Frameworks */,
+				3247831322C7412F0094F51F /* Resources */,
+				3247834E22C741340094F51F /* Embed Watch Content */,
+				D1C19F01FA51E71E0428DA94 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3247832A22C741320094F51F /* PBXTargetDependency */,
+			);
+			name = FifaWorldCup;
+			productName = FifaWorldCup;
+			productReference = 3247831522C7412F0094F51F /* FifaWorldCup.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3247832622C741320094F51F /* FifaWorldCup WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3247834B22C741340094F51F /* Build configuration list for PBXNativeTarget "FifaWorldCup WatchKit App" */;
+			buildPhases = (
+				805CADB418578531160F4F02 /* [CP] Check Pods Manifest.lock */,
+				3247832522C741320094F51F /* Resources */,
+				3247834A22C741340094F51F /* Embed App Extensions */,
+				60A73BB1C0CAC58AAEB4F169 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3247833922C741330094F51F /* PBXTargetDependency */,
+			);
+			name = "FifaWorldCup WatchKit App";
+			productName = "FifaWorldCup WatchKit App";
+			productReference = 3247832722C741320094F51F /* FifaWorldCup WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		3247833522C741330094F51F /* FifaWorldCup WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3247834722C741340094F51F /* Build configuration list for PBXNativeTarget "FifaWorldCup WatchKit Extension" */;
+			buildPhases = (
+				81982563CB17BE43F871BAC8 /* [CP] Check Pods Manifest.lock */,
+				3247833222C741330094F51F /* Sources */,
+				3247833322C741330094F51F /* Frameworks */,
+				3247833422C741330094F51F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FifaWorldCup WatchKit Extension";
+			productName = "FifaWorldCup WatchKit Extension";
+			productReference = 3247833622C741330094F51F /* FifaWorldCup WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3247830D22C7412F0094F51F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Wegile;
+				TargetAttributes = {
+					3247831422C7412F0094F51F = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					3247832622C741320094F51F = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					3247833522C741330094F51F = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 3247831022C7412F0094F51F /* Build configuration list for PBXProject "FifaWorldCup" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3247830C22C7412F0094F51F;
+			productRefGroup = 3247831622C7412F0094F51F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3247831422C7412F0094F51F /* FifaWorldCup */,
+				3247832622C741320094F51F /* FifaWorldCup WatchKit App */,
+				3247833522C741330094F51F /* FifaWorldCup WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3247831322C7412F0094F51F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3247832322C741320094F51F /* LaunchScreen.storyboard in Resources */,
+				3247832022C741320094F51F /* Assets.xcassets in Resources */,
+				3247831E22C7412F0094F51F /* Main.storyboard in Resources */,
+				324F2EF722CA161D00649233 /* MatchTVC.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3247832522C741320094F51F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3247833022C741330094F51F /* Assets.xcassets in Resources */,
+				3247832E22C741320094F51F /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3247833422C741330094F51F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3247834222C741340094F51F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		805CADB418578531160F4F02 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FifaWorldCup WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81982563CB17BE43F871BAC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FifaWorldCup WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8BD4CDBAB36057ABCBBF560 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FifaWorldCup-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1C19F01FA51E71E0428DA94 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FifaWorldCup/Pods-FifaWorldCup-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FifaWorldCup/Pods-FifaWorldCup-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FifaWorldCup/Pods-FifaWorldCup-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3247831122C7412F0094F51F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3247831B22C7412F0094F51F /* ViewController.swift in Sources */,
+				324F2EF222CA11F500649233 /* MapViewController.swift in Sources */,
+				3247831922C7412F0094F51F /* AppDelegate.swift in Sources */,
+				324F2EF622CA161D00649233 /* MatchTVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3247833222C741330094F51F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3247834022C741330094F51F /* NotificationController.swift in Sources */,
+				3247833E22C741330094F51F /* ExtensionDelegate.swift in Sources */,
+				3247833C22C741330094F51F /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3247832A22C741320094F51F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3247832622C741320094F51F /* FifaWorldCup WatchKit App */;
+			targetProxy = 3247832922C741320094F51F /* PBXContainerItemProxy */;
+		};
+		3247833922C741330094F51F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3247833522C741330094F51F /* FifaWorldCup WatchKit Extension */;
+			targetProxy = 3247833822C741330094F51F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3247831C22C7412F0094F51F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3247831D22C7412F0094F51F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3247832122C741320094F51F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3247832222C741320094F51F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3247832C22C741320094F51F /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3247832D22C741320094F51F /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3247834522C741340094F51F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3247834622C741340094F51F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3247834822C741340094F51F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02930F520ABD28D4B53AB8F9 /* Pods-FifaWorldCup WatchKit Extension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "FifaWorldCup WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.FifaWorldCup.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		3247834922C741340094F51F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F56DD3B851A5C489BD7D5BF9 /* Pods-FifaWorldCup WatchKit Extension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "FifaWorldCup WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.FifaWorldCup.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		3247834C22C741340094F51F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BC130480AFA29FB01F92C4C /* Pods-FifaWorldCup WatchKit App.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = FifaWorldCup_WatchKit_Extension;
+				INFOPLIST_FILE = "FifaWorldCup WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.FifaWorldCup.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		3247834D22C741340094F51F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECDBD4663E39DA60C76E0434 /* Pods-FifaWorldCup WatchKit App.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = FifaWorldCup_WatchKit_Extension;
+				INFOPLIST_FILE = "FifaWorldCup WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.FifaWorldCup.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		3247835022C741340094F51F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BD5A3E1B41BC7D48871B1D0 /* Pods-FifaWorldCup.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FifaWorldCup/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.FifaWorldCup;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3247835122C741340094F51F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A07A5B690C62D15CD2CD448D /* Pods-FifaWorldCup.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FifaWorldCup/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.FifaWorldCup;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3247831022C7412F0094F51F /* Build configuration list for PBXProject "FifaWorldCup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3247834522C741340094F51F /* Debug */,
+				3247834622C741340094F51F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3247834722C741340094F51F /* Build configuration list for PBXNativeTarget "FifaWorldCup WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3247834822C741340094F51F /* Debug */,
+				3247834922C741340094F51F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3247834B22C741340094F51F /* Build configuration list for PBXNativeTarget "FifaWorldCup WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3247834C22C741340094F51F /* Debug */,
+				3247834D22C741340094F51F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3247834F22C741340094F51F /* Build configuration list for PBXNativeTarget "FifaWorldCup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3247835022C741340094F51F /* Debug */,
+				3247835122C741340094F51F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3247830D22C7412F0094F51F /* Project object */;
+}
